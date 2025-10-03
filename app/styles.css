@@ -1,0 +1,363 @@
+/* App Styles - Dark Theme */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0f1419, #1a202c, #2d3748);
+  min-height: 100vh;
+  color: #e2e8f0;
+  overflow-x: hidden;
+}
+
+#screen1 {
+  animation: slideInFromLeft 0.6s ease-out;
+  background: linear-gradient(135deg, #1a202c, #2d3748, #4a5568);
+  padding: 2rem;
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  color: #e2e8f0;
+  text-align: center;
+  max-width: 1200px;
+  margin: 2rem auto;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+#screen1 h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  animation: fadeIn 0.8s ease-out 0.2s;
+  animation-fill-mode: both;
+  font-weight: 700;
+  text-shadow: 0 0px 4px rgba(0, 0, 0, 0.3);
+  color: #3b82f6;
+}
+
+/* Layout mejorado para las secciones */
+.sections-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.section {
+  margin: 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(51, 65, 85, 0.7));
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.6);
+}
+
+.section h3 {
+  color: #3b82f6;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+
+.section h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(135deg, #3b82f6, #60a5fa);
+  border-radius: 2px;
+}
+
+/* Botones organizados en grid */
+.section .button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+#screen1 button {
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0.9rem 1.2rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #3b82f6, #60a5fa, #93c5fd);
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.8s ease-out;
+  animation-fill-mode: both;
+  width: 100%;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+#screen1 button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+#screen1 button:hover::before {
+  left: 100%;
+}
+
+#screen1 button:hover {
+  background: linear-gradient(135deg, #2563eb, #3b82f6, #60a5fa);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.results {
+  margin-top: 2rem;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  text-align: left;
+}
+
+.results h4 {
+  color: #3b82f6;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #3b82f6;
+  padding-bottom: 0.6rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Sistema de Cards */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(51, 65, 85, 0.7));
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.6);
+}
+
+.card-header {
+  color: #3b82f6;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.card-content {
+  color: #e2e8f0;
+  line-height: 1.6;
+}
+
+.card-field {
+  margin-bottom: 0.8rem;
+  padding: 0.5rem;
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 10px;
+  border-left: 3px solid #3b82f6;
+}
+
+.card-field-label {
+  font-weight: 600;
+  color: #60a5fa;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+.card-field-value {
+  color: #e2e8f0;
+  font-size: 0.95rem;
+}
+
+/* Estilos para datos JSON cuando sea necesario */
+.results pre {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(51, 65, 85, 0.6));
+  padding: 1.5rem;
+  border-radius: 15px;
+  border-left: 4px solid #3b82f6;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #e2e8f0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Animación para las cards */
+.card {
+  animation: cardSlideIn 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.card:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+/* Efectos de scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mejoras adicionales para el diseño */
+.section {
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.section:hover::before {
+  left: 100%;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .sections-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  #screen1 {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .section {
+    padding: 1.5rem;
+  }
+
+  .section .button-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  #screen1 button {
+    font-size: 0.85rem;
+    padding: 0.8rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #screen1 h2 {
+    font-size: 1.8rem;
+  }
+
+  .section h3 {
+    font-size: 1.2rem;
+  }
+
+  #screen1 button {
+    font-size: 0.8rem;
+    padding: 0.7rem 0.9rem;
+  }
+}
